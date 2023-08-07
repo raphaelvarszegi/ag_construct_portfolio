@@ -1,11 +1,12 @@
 "use client" // this is a client component
-import React from "react"
+import React, { Suspense } from "react"
 import { useState } from "react"
 import { Link } from "react-scroll/modules"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { RiMoonFill, RiSunLine } from "react-icons/ri"
 import { IoMdMenu, IoMdClose } from "react-icons/io"
+import ThemeToggle from "./ThemeToggle"
 
 interface NavItem {
   label: string
@@ -78,21 +79,9 @@ export default function Navbar() {
                   </Link>
                 )
               })}
-              {currentTheme === "dark" ? (
-                <button
-                  onClick={() => setTheme("light")}
-                  className="bg-slate-100 p-2 rounded-xl"
-                >
-                  <RiSunLine size={25} color="black" />
-                </button>
-              ) : (
-                <button
-                  onClick={() => setTheme("dark")}
-                  className="bg-slate-100 p-2 rounded-xl"
-                >
-                  <RiMoonFill size={25} />
-                </button>
-              )}
+              <Suspense>
+              <ThemeToggle />
+              </Suspense>
             </div>
           </div>
         </div>

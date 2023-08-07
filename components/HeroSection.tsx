@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import { Link } from "react-scroll/modules";
-import { HiArrowDown } from "react-icons/hi";
 
 const HeroSection = () => {
   return (
@@ -31,7 +30,7 @@ const HeroSection = () => {
 
           <Link
             to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-yellow-500 rounded shadow hover:bg-yellow-600"
+            className="text-neutral-100 font-semibold px-6 py-3 bg-yellow-600 rounded shadow hover:bg-yellow-700"
             activeClass="active"
             spy={true}
             smooth={true}
@@ -41,18 +40,6 @@ const HeroSection = () => {
             Projektek
           </Link>
         </div>
-        <div className="flex flex-row items-center text-center justify-center">
-        <Link
-          to="about"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-        >
-          <HiArrowDown size={35} className="animate-bounce" />
-        </Link>
-      </div>
     </section>
   );
 };
