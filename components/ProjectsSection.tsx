@@ -4,6 +4,7 @@ import Link from "next/link"
 import SlideUp from "./SlideUp"
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
+
 const projects = [
   {
     name: "M3 metrófelújítás",
@@ -13,6 +14,7 @@ const projects = [
     link: "",
   }
 ]
+
 
 const ProjectsSection = () => {
   return (

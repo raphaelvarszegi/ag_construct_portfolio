@@ -13,7 +13,7 @@ const HeroSection = () => {
             alt=""
             width={500}
             height={500}
-            className="rounded-full shadow-2xl"
+            className="rounded-lg shadow-2xl"
           />
         </div>
         <div className="md:mt-2 md:w-3/5 py-6 px-3">
